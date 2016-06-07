@@ -1,0 +1,22 @@
+<!Doctype html>
+<html ng-app = "myApp">
+<head>
+  <title></title>
+  <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+</head>
+<body ng-controller= "mySimpleCtrl">
+    {{message}}
+
+  <div ng-repeat = "number in data">
+    {{number}}
+  </div>
+</body>
+
+  <script type="text/javascript">
+    var app = angular.module('myApp', []);
+    app.controller('mySimpleCtrl', function ($scope) {
+      $scope.message = 'hello!';
+      $scope.data = [1,2,3];
+    });
+  </script>
+</html>
